@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/msenyoo/ps-react/workflows/Node.js%20CI/badge.svg)
+
 # React Components
 
 A library of React components.
