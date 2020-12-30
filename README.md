@@ -1,17 +1,14 @@
-# Pluralsight React Components
+# React Components
 
-A library of React components created in [Creating Reusable React Components](https://app.pluralsight.com/library/courses/react-creating-reusable-components) on Pluralsight.
+A library of React components.
 
 ## Install
 ```
 npm install ps-react
 ```
 
-## Issues
-[Here's a list of current known issues in the course](https://github.com/coryhouse/ps-react/issues).
-
 ## Docs
-[Component documentation](http://coryhouse.github.io/ps-react)
+[Component documentation](https://msenyoo.github.io/ps-react/)
 
 ## Component Hall of Fame 🎉
 Here's a list of components built by your fellow viewers!
