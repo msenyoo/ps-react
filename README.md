@@ -5,14 +5,17 @@
 A library of React components.
 
 ## Install
+
 ```
 npm install ps-react
 ```
 
 ## Docs
-[Component documentation](https://msenyoo.github.io/ps-react/)
+
+[Component documentation](https://msenyoo.github.io/react-helper-libs/)
 
 ## Component Hall of Fame 🎉
+
 Here's a list of components built by your fellow viewers!
 
 Submit a pull request to add your link here... :)
@@ -23,11 +26,12 @@ Submit a pull request to add your link here... :)
 
 - [flexboxgrid-components](https://github.com/darcusfenix/flexboxgrid-components) A library of React components which can be used to add classes of flexboxgrid to div tags, by Juan Crisóstomo. Documentation at [https://darcusfenix.github.io/flexboxgrid-components/](https://darcusfenix.github.io/flexboxgrid-components/)
 
-
 ## React Component libraries
+
 Here's a list of popular component libraries I mention at the end of the course:
+
 - [Material UI](http://material-ui.com)
-- [React Toolbox](http://react-toolbox.com) 
+- [React Toolbox](http://react-toolbox.com)
 - [React Bootstrap](http://react-bootstrap.github.io)
 - [React Foundation](http://react.foundation)
 - [Blueprint](http://blueprintjs.com)

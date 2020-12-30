@@ -45,7 +45,7 @@ function createPackageFile() {
       } = packageData;
 
       const minimalPackage = {
-        name: "react-shared-components",
+        name: "react-helper-libs",
         author,
         version,
         description,

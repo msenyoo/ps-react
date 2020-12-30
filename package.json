@@ -1,15 +1,32 @@
 {
-  "name": "ps-react-build-template",
-  "version": "1.0.0",
+  "name": "react-helper-libs-build-template",
+  "version": "1.2.0",
   "main": "./lib/index.js",
   "private": true,
   "engines": {
     "node": ">=4.0.0"
   },
   "author": {
-    "name": "Cory House",
-    "email": "cory@reactjsconsulting.com",
-    "url": "http://reactjsconsulting.com/"
+    "name": "Senthilkumar Mathivanan",
+    "email": "msenyoo@gmail.com"
+  },
+  "homepage": "http://msenyoo.github.io/react-helper-libs",
+  "scripts": {
+    "prestart": "npm run gen:docs",
+    "start": "npm-run-all --parallel start:docs gen:docs-watch",
+    "start:docs": "node scripts/start.js",
+    "gen:docs": "node scripts/generateComponentData.js",
+    "gen:docs-watch": "npm run gen:docs -- --watch",
+    "build:docs": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
+    "build:copy-files": "node scripts/copyBuildFiles.js",
+    "predeploy:docs": "npm run build:docs",
+    "deploy:docs": "gh-pages -d build",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "prepublish": "npm run build:lib"
   },
   "files": [
     "lib"
@@ -18,8 +35,7 @@
     "components",
     "react",
     "react-component",
-    "toolkit",
-    "pluralsight"
+    "toolkit"
   ],
   "dependencies": {
     "react": "^15.5.4",
@@ -78,24 +94,6 @@
     "webpack-dev-server": "2.4.5",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
-  },
-  "homepage": "http://coryhouse.github.io/ps-react/",
-  "scripts": {
-    "prestart": "npm run gen:docs",
-    "start": "npm-run-all --parallel start:docs gen:docs-watch",
-    "start:docs": "node scripts/start.js",
-    "gen:docs": "node scripts/generateComponentData.js",
-    "gen:docs-watch": "npm run gen:docs -- --watch",
-    "build:docs": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
-    "prebuild:lib": "rimraf lib",
-    "build:lib": "npm-run-all --parallel build:commonjs build:css build:copy-files",
-    "build:copy-files": "node scripts/copyBuildFiles.js",
-    "predeploy:docs": "npm run build:docs",
-    "deploy:docs": "gh-pages -d build",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
-    "prepublish": "npm run build:lib"
   },
   "jest": {
     "collectCoverageFrom": [
