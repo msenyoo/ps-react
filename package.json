@@ -1,6 +1,7 @@
 {
   "name": "react-helper-libs-build-template",
-  "version": "1.2.0",
+  "description": "React helper libraries",
+  "version": "1.2.2",
   "main": "./lib/index.js",
   "private": true,
   "engines": {
